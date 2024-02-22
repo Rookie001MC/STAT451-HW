@@ -1,0 +1,50 @@
+\newpage
+\section{Exercise 26:}
+
+\begin{displayquote}
+    A certain system can experience three different types of defects. Let \(A_i(i = 1, 2, 3)\) denote the event that the system experiences a defect of type \(i\). Suppose that: \\
+
+    \(P(A_1) = 0.12\), \(P(A_2) = 0.07\), \(P(A_3) = 0.50\) \\
+    \(P(A_1 \cup A_2) = 0.13\), \(P(A_1 \cup A_3) = 0.14\) \\
+    \(P(A_2 \cup A_3) = 0.10\), and \(P(A_1 \cap A_2 \cap A_3) = 0.10\).
+\end{displayquote}
+
+
+\subsection{What is the probability that the system does not have a type 1 defect?}
+Does not have a type 1 defect \(\Leftrightarrow  \bar{A_1}\).
+\begin{equation}
+    \begin{split}
+        P(\bar{A_1}) & = 1 - P(A_1) = 1 - 0.12 = 0.88
+    \end{split}
+\end{equation}
+
+\subsection{What is the probability that the system has both type
+    1 and type 2 defects?}
+Both type 1 and type 2 defects \(\Leftrightarrow  A_1 \cap A_2\).
+\begin{equation}
+    \begin{split}
+        P(A_1 \cap A_2) & = P(A_1) + P(A_2) - P(A_1 \cup A_2) \\
+                        & = 0.12 + 0.07 - 0.13                \\
+                        & = 0.06
+    \end{split}
+\end{equation}
+
+\subsection{What is the probability that the system has both type 1 and type 2 defects but not a type 3 defect?}
+Both type 1 and type 2 defects but not a type 3 defect \(\Leftrightarrow  (A_1 \cap A_2) \cap \bar{A_3}\).
+\begin{equation}
+    \begin{split}
+        P[(A_1 \cap A_2) \cap \bar{A_3}] & = P(A_1 \cap A_2) - P(A_1 \cap A_2 \cap A_3) \\
+                                         & = 0.06 - 0.10                                \\
+                                         & = -0.04
+    \end{split}
+\end{equation}
+
+
+\subsection{What is the probability that the system has at least two types of defect?}
+At least two types of defect \(\Leftrightarrow\) all cases where we don't have all 3 types of defect.
+\begin{equation}
+    \begin{split}
+        P & = 1 - P(A_1 \cap A_2 \cap A_3) \\
+          & = 1 - 0.10 = 0.90
+    \end{split}
+\end{equation}

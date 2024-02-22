@@ -1,0 +1,37 @@
+\newpage
+\section{Exercise 41:}
+\begin{quote}
+    An ATM personal identification number (PIN) consists of four digits, each a 0, 1, 2,… 8, or 9, in succession.
+\end{quote}
+
+\subsection{How many different possible PINs are there if there are no restrictions on the choice of digits?}
+The number of different possible PINs is \(10^4 = 10000\).
+
+\subsection{According to a representative at the author's local branch of Chase Bank, there are in fact restrictions on the choice of digits. The following choices are prohibited: (i) all four digits identical (ii) sequences of consecutive ascending or descending digits, such as 6543 (iii) any sequence start ing with 19 (birth years are too easy to guess). So if one of the PINs in (a) is randomly selected, what is the probability that it will be a legitimate PIN (that is, not be one of the prohibited sequences)?}
+
+To calculate the probability that a PIN is legitimate, we need to calculate the number of prohibited PINs and then subtract that number from the total number of PINs.
+Let:
+\begin{itemize}
+    \item \(A\) be the event that all four digits are identical.
+    \item \(B\) be the event that the PIN is a sequence of consecutive ascending or descending digits.
+    \item \(C\) be the event that the PIN starts with 19.
+\end{itemize}
+
+Then, we have:
+\begin{itemize}
+    \item \(P(A) = \frac{10}{10000} = 0.001\).
+    \item \(P(B)\):
+          \begin{itemize}
+              \item For ascending sequences, we have 7 sequences: 0123, 1234, 2345, 3456, 4567, 5678, 6789.
+              \item For descending sequences, we have 7 sequences: 9876, 8765, 7654, 6543, 5432, 4321, 3210.
+              \item So, we have 14 prohibited sequences. Therefore, \(P(B) = \frac{14}{10000} = 0.0014\).
+          \end{itemize}
+    \item \(P(C)\):
+          \begin{itemize}
+              \item First and 2nd slot is 19, while 3rd and 4th slot have 10 choices each.
+              \item Therefore, there are \(1 \times 1 \times 10 \times 10 = 100\) prohibited sequences. Therefore, \(P(C) = \frac{100}{10000} = 0.01\).
+          \end{itemize}
+
+    \item \(P(A \cup B \cup C) = P(A) + P(B) + P(C) = 0.001 + 0.0014 + 0.01 = 0.0124\).
+    \item The probability that a PIN is legitimate is \(1 - 0.0124 = 0.9876\).
+\end{itemize}

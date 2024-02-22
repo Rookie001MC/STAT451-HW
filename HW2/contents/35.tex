@@ -1,0 +1,35 @@
+\newpage
+\section{Exercise 35:}
+\begin{quote}
+    A production facility employs 10 workers on the day shift, 8 workers on the swing shift, and 6 workers on the graveyard shift. A quality control consultant is to select 5 of these workers for in-depth interviews. Suppose the selection is made in such a way that any particular group of 5 workers has the same chance of being selected as does any other group (drawing 5 slips without replacement from among 24).
+\end{quote}
+
+\subsection{How many selections result in all 5 workers coming from the day shift? What is the probability that all 5 selected workers will be from the day shift?}
+\begin{itemize}
+    \item Based on the question, we pick 5 out of the 10 day workers.
+          \begin{itemize}
+              \item Number of selections: \(\binom{10}{5} = 252 \)
+              \item Probability: \( P(all\ 5\ from\ day\ shift) = \frac{\binom{10}{5}}{\binom{24}{6}} \approx 0.00592 \)
+          \end{itemize}
+\end{itemize}
+
+\subsection{What is the probability that all 5 selected workers will be from the same shift?}
+Let \(A, B, C\) are the events that all 5 workers come from the day, swing, and graveyard shifts, respectively. Then, we have:
+\begin{equation}
+    \begin{split}
+        P(6 from same shifts) & = P(A) + P(B) + P(C)                                                                                            \\
+                              & = \frac{\binom{10}{5}}{\binom{24}{5}} + \frac{\binom{8}{5}}{\binom{24}{5}} + \frac{\binom{6}{5}}{\binom{24}{5}} \\
+                              & \approx 0.00592 + 0.00131 + 0.00014                                                                             \\
+                              & \approx 0.00737
+    \end{split}
+\end{equation}
+
+\subsection{What is the probability that at least two different shifts will be represented among the selected workers?}
+At least 2 different shifts will be represented \( \Leftrightarrow\) all cases where we don't have all 5 workers from the same shift.
+\begin{equation}
+    \begin{split}
+        P & = 1 - P(6\ from\ same\ shifts) \\
+          & = 1 - 0.00737 = 0.99263
+    \end{split}
+\end{equation}
+

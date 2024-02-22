@@ -1,0 +1,37 @@
+\newpage
+\section{Exercise 17:}
+
+\begin{displayquote}
+    Let A denote the event that the next request for assistance from a statistical software consultant relates to the SPSS package, and let B be the event that the next request is for help with SAS\@. Suppose that \(P(A) = .30\)  and \(P(B) = .50\).
+    \begin{itemize}
+        \item [a.] Why is it not the case that \(P(A) + P(B) = 1\)?
+        \item [b.] Calculate \(P(A')\).
+        \item [c.] Calculate \(P(A \cup B)\).
+        \item [d.] Calculate \(P(A' \cap B')\).
+    \end{itemize}
+\end{displayquote}
+
+\subsection{a. Why is it not the case that \(P(A) + P(B) = 1\)?}
+The events A and B are not mutually exclusive (disjointed), because, apart from the 2 package above, there are probably other packages that the consultant can use. Therefore, the sum of the probabilities of A and B is not equal to 1.
+
+\subsection{b. Calculate \(P(A')\).}
+\(P(A') = 1 - P(A) = 1 - 0.30 = 0.70\)
+
+\subsection{c. Calculate \(P(A \cup B)\).}
+Because A and B are disjointed, the intersection of A and B is 0:
+\begin{equation}
+    \begin{split}
+        P(A \cup B) & = P(A) + P(B) - P(A \cap B) = 0.30 + 0.50 - P(A \cap B) \\
+                    & = 0.80 - P(A \cap B)                                    \\
+                    & = 0.80 - 0                                              \\
+                    & = 0.80
+    \end{split}
+\end{equation}
+
+\subsection{d. Calculate \(P(A' \cap B')\).}
+Use De Morgan's Law:
+\begin{equation}
+    \begin{split}
+        P(A' \cap B') & = P[(A \cup B)'] = 1 - P(A \cup B) = 1 - 0.80 = 0.20
+    \end{split}
+\end{equation}
